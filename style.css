@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+html,body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    min-height:100vh;
+}
+body{
+    background-color:hsl(210, 46%, 95%);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size:16px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+/*Main container*/
+.container{
+    font-size:14px;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+    max-width:80%;
+    margin:5rem 0;
+    /* align-items: start; */
+}
+/*  styling pic and name  */
+.info{
+    position: relative;
+}
+.content{
+    margin-inline-start: 30px;
+    margin-inline-end: 30px;
+}
+.info{
+    margin-inline-start: 30px;
+    margin-block-start:1em;
+    margin-block-end: 1em;
+}
+.info img{
+    border-radius:100%;
+}
+.info h3{
+    display: inline-block;
+    position:absolute;
+    padding: 0;
+    margin:0 1.5rem;
+}
+.info h3::after{
+    content:"Verified Graduate";
+    margin-top:.25rem;
+    display:block;
+    font-weight:500;
+    color: hsl(0, 0%, 81%);
+}
+/* styling each card */
+.card{
+    padding:1rem 0;
+    margin:1rem;
+    border-radius:.75rem;
+}
+.card1{
+    background-color: hsl(263, 55%, 52%);
+    grid-column:1/span 3;
+    background-image: url('./testimonials-grid-section-main/images/bg-pattern-quotation.svg');
+    background-position:75% top ;
+    background-size:16%;
+    background-repeat: no-repeat;
+}
+.card1 .info img{
+    border:2px solid palevioletred
+}
+.card2{
+    background-color: hsl(217, 19%, 35%);
+}
+.card3,.card5{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+.card4{
+    background-color: hsl(219, 29%, 14%);
+    grid-column:2/ span 3;
+}
+.card5{
+    grid-column:5;
+    grid-row:1/span 2;
+}
+/*  text styling  */
+.text{
+    line-height:25px;
+    margin-bottom:.5rem;
+}
+.main-title{
+    margin-top:2rem;
+}
+.card1,.card2,.card4{
+    color:white;
+}
+.card .text{
+    color:hsl(0, 0%, 81%);
+}
+.card3 .text,.card5 .text{
+    color:hsl(219, 10%, 65%);
+}
+
+@media only screen and (max-width:1450px){
+    .card{
+        grid-column:unset;
+        grid-row:unset;
+    }
+    .card1{
+        background-position:top right;
+        background-size:100px;
+    }
+    .container{
+        max-width:100%;
+        grid-template-columns:auto;
+        margin-top:unset;
+    }
+}
